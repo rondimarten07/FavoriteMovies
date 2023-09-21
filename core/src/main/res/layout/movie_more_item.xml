@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    app:cardBackgroundColor="@color/colorBlack"
+    app:cardCornerRadius="@dimen/card_corners_radius">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/medium_margin">
+
+        <ImageView
+            android:id="@+id/img_movie_poster"
+            android:layout_width="99dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/movie_poster"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/tv_movie_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textAppearance="@style/Typography.Body1"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img_movie_poster"
+            app:layout_constraintTop_toTopOf="@+id/img_movie_poster"
+            tools:text="Ant-Man and the Bug: Quantumania" />
+
+        <TextView
+            android:id="@+id/tv_movie_vote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_text_container"
+            android:drawablePadding="@dimen/small_margin"
+            android:elegantTextHeight="true"
+            android:gravity="center"
+            android:minWidth="70dp"
+            android:textColor="@color/white"
+            android:padding="8dp"
+            android:textAppearance="@style/TypographyStyle.Body2"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_star"
+            app:layout_constraintStart_toStartOf="@+id/tv_movie_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_movie_title"
+            tools:drawableStart="@drawable/ic_star"
+            tools:text="3.5" />
+
+        <TextView
+            android:id="@+id/tv_movie_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_text_container"
+            android:elegantTextHeight="true"
+            android:gravity="center"
+            android:minWidth="70dp"
+            android:textColor="@color/white"
+            android:padding="8dp"
+            android:textAppearance="@style/TypographyStyle.Body2"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/tv_movie_vote"
+            app:layout_constraintTop_toTopOf="@+id/tv_movie_vote"
+            tools:text="2022" />
+
+        <TextView
+            android:id="@+id/tv_movie_overview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/white"
+            android:textAppearance="@style/Typography.Body2"
+            app:layout_constraintBottom_toBottomOf="@+id/img_movie_poster"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_movie_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_movie_vote"
+            tools:text="@tools:sample/lorem/random" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

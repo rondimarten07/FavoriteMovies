@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">FavMovies</string>
+    <string name="title_popular">Popular Movies</string>
+    <string name="title_top_rated">Top Rated Movies</string>
+    <string name="title_genre">%s Movies</string>
+    <string name="overview">Overview</string>
+    <string name="favorite">Favorite</string>
+    <string name="title_favorite">Favorite</string>
+    <string name="favorite_menu">Favorite Menu</string>
+    <string name="title_detail">Detail</string>
+</resources>
