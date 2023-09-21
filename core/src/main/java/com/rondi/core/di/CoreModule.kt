@@ -36,11 +36,11 @@ val databaseModule = module {
 
 val networkModule = module {
     single {
-        val hostname = "api.themoviedb.org"
+        val hostname = BuildConfig.HOSTNAME
         val certificatePinner = CertificatePinner.Builder()
-            .add(hostname, "sha256/5VLcahb6x4EvvFrCF2TePZulWqrLHS2jCg9Ywv6JHog=")
-            .add(hostname, "sha256/vxRon/El5KuI4vx5ey1DgmsYmRY0nDd5Cg4GfJ8S+bg=")
-            .add(hostname, "sha256/++MBgDH5WGvL9Bcn5Be30cRcL0f5O+NyoXuWtQdX1aI=")
+            .add(hostname, BuildConfig.CERTIFICATE_PINNER_1)
+            .add(hostname, BuildConfig.CERTIFICATE_PINNER_2)
+            .add(hostname, BuildConfig.CERTIFICATE_PINNER_3)
             .build()
         val keyInterceptor = Interceptor {
             val request = it.request()

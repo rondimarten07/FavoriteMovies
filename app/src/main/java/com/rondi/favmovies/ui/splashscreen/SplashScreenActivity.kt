@@ -14,7 +14,6 @@ import com.rondi.favmovies.ui.main.MainActivity
 @SuppressLint("CustomSplashScreen")
 class SplashScreenActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySplashScreenBinding
-    private val splashTimeOut: Long = 3000
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,5 +31,8 @@ class SplashScreenActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }, splashTimeOut)
+    }
+    companion object {
+        private const val splashTimeOut: Long = 3000
     }
 }
